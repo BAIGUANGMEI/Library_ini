@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆</title>
+</head>
+<body>
+    <h2>书籍详情</h2>
+    <br>
+    <div>
+        <p>书名：{{book.title}}</p>
+        <p>作者：
+            <a href="/authordetail/{{ book.author.id }}/">{{book.author.name}}</a>
+        </p>
+        <p>出版社：
+            {% for i in book.publishers%}
+                <a href="/publishdetail/{{ i.id }}/">{{i.name}}</a>|
+            {% endfor %}
+        </p>
+        <p>出版时间：{{book.date}}</p>
+    </div>
+</body>
+</html>

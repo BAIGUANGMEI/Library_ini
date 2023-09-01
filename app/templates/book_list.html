@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆查询项目</title>
+</head>
+<body>
+    <h2>书籍列表</h2>
+    <br>
+    <div>
+    <ul>
+        {% for i in books %}
+            <li>
+                <a href="/bookdetail/{{ i.id }}/">{{ i.title }}</a>
+{#                <a href="{{ url_for('user.book_detail',bid=i.id) }}">{{ i.title }}</a>#}
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

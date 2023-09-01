@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆</title>
+</head>
+<body>
+    <h2>出版社详情</h2>
+    <br>
+    <div>
+        <p>出版社：{{ publish.name }}</p>
+        <p>地址：{{publish.address}}</p>
+        <p>城市：{{ publish.city }}</p>
+        <p>省：{{ publish.province }}</p>
+        <p>国家：{{ publish.country }}</p>
+        <p>网站：{{ publish.website }}</p>
+        <p>出版图书：
+            {% for i in publish.books %}
+                {{ i.title }}
+            {% endfor %}
+        </p>
+    </div>
+</body>
+</html>

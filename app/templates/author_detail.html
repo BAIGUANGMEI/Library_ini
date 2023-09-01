@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆</title>
+</head>
+<body>
+    <h2>作者详情</h2>
+    <br>
+    <div>
+        <p>作者：{{ author.name }}</p>
+        <p>年龄：{{ author.age }}</p>
+        <p>性别：
+            {% if author.sex==1 %}
+                男
+            {% else: %}
+                女
+            {% endif %}
+        </p>
+        <p>邮箱：{{ author.email }}</p>
+        <p>作品：
+            {% for book in author.books %}
+                {{ book.title }}
+            {% endfor %}
+        </p>
+    </div>
+</body>
+</html>
